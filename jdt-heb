@@ -1,0 +1,74 @@
+//David Yelsey
+partial default alphanumeric_keys
+xkb_symbols "jdtheb" {
+
+name[Group1] = "Jdt Hebrew";
+key.type[group1] = "FOUR_LEVEL";
+
+    // Alphanumeric section
+    key <TLDE> { [ grave,	asciitilde ] };
+    key <AE01> { [	   1,     exclam,	onehalf,	onesuperior ] };
+    key <AE02> { [	   2,         at,	U25CC,	twosuperior ] };
+    key <AE03> { [	   3, numbersign,	U0306,	threesuperior ] };
+    key <AE04> { [	   4,     dollar,	onequarter,	EuroSign ] };
+    key <AE05> { [	   5,    percent,	U0329,	U02CC] };
+    key <AE06> { [		6, asciicircum,	U0302,	U030C ] };
+    key <AE07> { [	   7,  ampersand,	U203D,	notsign	] };
+    key <AE08> { [	   8,   asterisk,	infinity,	squareroot	] };
+    key <AE09> { [	   9,  parenleft, U02D0,	U032F	] };
+    key <AE10> { [	   0, parenright,	degree,	U0325	] };
+    key <AE11> { [     minus,	underscore,	multiply,	U0304 ] };
+    key <AE12> { [     equal,	plus,	approxeq,	notequal] };
+
+
+
+    key <AD01> { [	   UFB31,          Q] };
+    key <AD02> { [	   U05D9,          W	] };
+    key <AD03> { [	   U05E7,          E] };
+    key <AD04> { [	   U05E8,          R	] };
+    key <AD05> { [	   U05D0,          T	] };
+    key <AD06> { [	   U05D8,          Y	] };
+    key <AD07> { [	   U05D5,          UFB35	] };
+    key <AD08> { [	   U05DF,          I] };
+    key <AD09> { [	   U05DD,          O] };
+    key <AD10> { [	   U05E4,          P	] };
+    key <AD11> { [  braceleft, bracketleft] };
+    key <AD12> { [  braceright, bracketright] };
+
+    key <AC01> { [	   U05E9,          A	] };
+    key <AC02> { [	   U05D3,          S] };
+    key <AC03> { [	   U05D2,          D] };
+    key <AC04> { [	   U05DB,          F	] };
+    key <AC05> { [	   U05E2,          G	] };
+    key <AC06> { [     UFB2F,          H] };
+    key <AC07> { [	   U05EA,          J	] };
+    key <AC08> { [	   U05DC,          K] };
+
+    key <AC09> { [	   U05DA,          L] };
+    key <BKSL> { [ semicolon,	colon ] };
+    key <AC11> { [apostrophe,	quotedbl,	U005C,	U007C	] };
+    key <AB01> { [	   U05D6,          Z] };
+    key <AB02> { [	   U05E1,          X] };
+    key <AB03> { [	   U05D1,          C] };
+    key <AB04> { [	   U05D4,          V	] };
+    key <AB05> { [	   U05E0,          B	] };
+    key <AB06> { [	   U05DE,          N	] };
+    key <AB07> { [	   U05E6,          M	] };
+    key <AB08> { [	comma,	less] };
+    key <AB09> { [	period, greater	] };
+    key <AB10> { [     slash,   question] };
+
+    key <AC10> { [ UFB2E,  UFB30] };
+
+
+	 include "jdt-heb(nbsp)"
+};
+
+
+
+partial alphanumeric_keys
+xkb_symbols "nbsp" {
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+
+};

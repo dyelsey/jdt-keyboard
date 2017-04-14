@@ -1,0 +1,81 @@
+//David Yelsey
+partial default alphanumeric_keys
+xkb_symbols "jdtlat" {
+
+name[Group1] = "Jdt Latin";
+key.type[group1] = "FOUR_LEVEL";
+
+    //include "us(basic)"
+	 //include "kaa(basic)"
+    // Alphanumeric section
+    key <TLDE> { [ grave,	asciitilde ] };
+    key <AE01> { [	   1,     exclam,	onehalf,	onesuperior ] };
+    key <AE02> { [	   2,         at,	U25CC,	twosuperior ] };
+    key <AE03> { [	   3, numbersign,	U0306,	threesuperior ] };
+    key <AE04> { [	   4,     dollar,	onequarter,	EuroSign ] };
+    key <AE05> { [	   5,    percent,	U0329,	U02CC] };
+    key <AE06> { [		6, asciicircum,	U0302,	U030C ] };
+    key <AE07> { [	   7,  ampersand,	U203D,	notsign	] };
+    key <AE08> { [	   8,   asterisk,	infinity,	squareroot	] };
+    key <AE09> { [	   9,  parenleft, U02D0,	U032F	] };
+    key <AE10> { [	   0, parenright,	degree,	U0325	] };
+    key <AE11> { [     minus,	underscore,	multiply,	U0304 ] };
+    key <AE12> { [     equal,	plus,	approxeq,	notequal] };
+
+
+
+    key <AD01> { [	   q,          Q] };
+    key <AD02> { [	   U1E29,          U1E28	] };
+    key <AD03> { [	   e,          E] };
+    key <AD04> { [	   r,          R	] };
+    key <AD05> { [	   t,          T	] };
+    key <AD06> { [	   y,          Y	] };
+    key <AD07> { [	   u,          U	] };
+    key <AD08> { [	   i,          I] };
+    key <AD09> { [	   o,          O] };
+    key <AD10> { [	   p,          P	] };
+    key <AD11> { [  U00E7,  U00C7, 	braceleft, bracketleft] };
+    key <AD12> { [  U0259, U018F, braceright, bracketright] };
+
+    key <AC01> { [	   a,          A	] };
+    key <AC02> { [	   s,          S] };
+    key <AC03> { [	   d,          D] };
+    key <AC04> { [	   f,          F	] };
+    key <AC05> { [	   g,          G	] };
+    key <AC06> { [     h,          H] };
+    key <AC07> { [	   j,          J	] };
+    key <AC08> { [	   k,          K] };
+
+    key <AC09> { [	   l,          L] };
+    key <AC11> { [ U015F, U015E, semicolon,	colon ] };
+    key <BKSL> { [apostrophe,	quotedbl,	U005C,	U007C	] };
+    key <AB01> { [	   z,          Z] };
+    key <AB02> { [	   x,          X] };
+    key <AB03> { [	   c,          C] };
+    key <AB04> { [	   v,          V	] };
+    key <AB05> { [	   b,          B	] };
+    key <AB06> { [	   n,          N	] };
+    key <AB07> { [	   m,          M	] };
+    key <AB08> { [	comma,	less] };
+    key <AB09> { [	period, greater	] };
+    key <AB10> { [     slash,   question] };
+
+    key <AC10> { [ U0127,      U0126,   Ubackslash,        bar ] };
+// include "level3(ralt_switch)"
+//	key <RALT>  {
+//		type[Group1]="ONE_LEVEL",
+//		symbols[Group1] = [ ISO_Level3_Shift ]
+//	};
+//	modifier_map Mod5   { ISO_Level3_Shift };
+
+	 include "jdt-lat(nbsp)"
+};
+
+
+
+partial alphanumeric_keys
+xkb_symbols "nbsp" {
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+
+};

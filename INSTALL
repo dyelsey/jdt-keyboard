@@ -1,0 +1,32 @@
+<ol>
+<li>Download all the files listed in [https://github.swarthmore.edu/dyelsey1/ling073-jdt-keyboard in my keyboard repo on github]. You can do this with <code>git clone git@github.swarthmore.edu:dyelsey1/ling073-jdt-keyboard.git</code>
+<li>Put the all the tks files in <code>/usr/share/X11/xkb/symbols</code>.  You can use the <code>cp</code> command to do it, and you'll probably need to use <code>sudo</code> too.  E.g. <code>sudo cp tks /usr/share/X11/xkb/symbols/</code></li>
+<li>Add a layout entry in the <code>/usr/share/X11/xkb/rules/evdev.xml</code> file for the layout.  To do this, edit that file with your favorite text editor (again, you'll probably need sudo), and search for the end of the layoutList section by searching for <code><NOWIKI></layoutList></NOWIKI></code> in the file.  Copy a simple layout block from above that line, paste it in as a new layout block (between the last <code><NOWIKI></layout></NOWIKI></code> and <code><NOWIKI></layoutList></NOWIKI></code>and modify it for this layout.  You can use something like this:
+<pre><NOWIKI>
+     <layout>
+      <configItem>
+        <name>jdt-lat</name>
+        <shortDescription>jdt-lat</shortDescription>
+        <description>Judeo-Tat (Latin)</description>
+        <languageList><iso639Id>jdt</iso639Id><iso639Id>jdt-lat</iso639Id></languageList>
+      </configItem>
+    </layout>
+     <layout>
+      <configItem>
+        <name>jdt-cyr</name>
+        <shortDescription>jdt-cyr</shortDescription>
+        <description>Judeo-Tat (Cyrillic)</description>
+        <languageList><iso639Id>jdt</iso639Id><iso639Id>jdt-cyr</iso639Id></languageList>
+      </configItem>
+    </layout>
+     <layout>
+      <configItem>
+        <name>jdt-heb</name>
+        <shortDescription>jdt-heb</shortDescription>
+        <description>Judeo-Tat (Hebrew)</description>
+        <languageList><iso639Id>jdt</iso639Id><iso639Id>jdt-heb</iso639Id></languageList>
+      </configItem>
+    </layout>
+</NOWIKI></pre></li>
+<li>Save the file, exit the editor, and restart cinnamon.  The quickest way to do this is to run <code>cinnamon --replace</code> on the command line.</li>
+<li>Go back to your keyboard layout settings, and you should be able to find all three layouts under "Judeo-Tat (*)" in the list.</li>
