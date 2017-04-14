@@ -1,6 +1,8 @@
 ## Keyboard-layouts for Judeo-Tat in Cyrillic, Latin, and Hebrew
 
 For all three keyboard layouts, I made an effort to keep commonly used non-letter characters still easily accessible. In all three alphabets, Judeo-Tat uses a large subset of the commonly used letters. I then replaced the letters not used in Judeo-Tat with the uncommon letters found in Judeo-tat.  
+
+To add this keyboard layout in Linux, add the following code to your `/usr/share/X11/xkb/rules/evdev.xml` file. 
 ```
      <layout>
       <configItem>
